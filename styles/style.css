@@ -132,7 +132,7 @@ body {
 .header {       
     min-height: 400px;
     color: #ffffff;    
-    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/banner-bg.jpg") no-repeat top center;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../images/banner-bg.jpg") no-repeat top center;
     background-size: cover;
     background-color: #000000;
 }
@@ -357,13 +357,13 @@ main {
     width: 49px;
     height: 49px;
     border: 0;    
-    background: url("/svg/search.svg") no-repeat center center, linear-gradient(#b59f5b, #b59f5b);
+    background: url("../svg/search.svg") no-repeat center center, linear-gradient(#b59f5b, #b59f5b);
     background-size: 18px;
 }
 
 .side-bar__search button:hover {
     cursor: pointer;
-    background: url("/svg/search.svg") no-repeat center center, linear-gradient(#323232, #323232);
+    background: url("../svg/search.svg") no-repeat center center, linear-gradient(#323232, #323232);
     background-size: 18px;
 }
 
@@ -496,15 +496,15 @@ main {
 }
 
 .footer__link_twitter {
-    background-image: url("/svg/001-dribbble.svg");    
+    background-image: url("../svg/001-dribbble.svg");    
 }
 
 .footer__link_pinterest {    
-    background-image: url("/svg/001-pinterest.svg");    
+    background-image: url("../svg/001-pinterest.svg");    
 }
 
 .footer__link_tumblr {    
-    background-image: url("/svg/003-tumblr.svg");  
+    background-image: url("../svg/003-tumblr.svg");  
 }
 
 .footer__copyrights {
@@ -541,22 +541,22 @@ main {
 }
 
 .trends_card__img1 {
-    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/trend1.jpg") no-repeat top center;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../images/trend1.jpg") no-repeat top center;
     background-size: cover;
 }
 
 .trends_card__img2 {
-    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/trend2.jpg") no-repeat top center;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../images/trend2.jpg") no-repeat top center;
     background-size: cover;
 }
 
 .trends_card__img3 {
-    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/trend3.jpg") no-repeat top center;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../images/trend3.jpg") no-repeat top center;
     background-size: cover;
 }
 
 .trends_card__img4 {
-    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/trend4.jpg") no-repeat top center;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../images/trend4.jpg") no-repeat top center;
     background-size: cover;
 }
 
