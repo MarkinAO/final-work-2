@@ -202,9 +202,8 @@ main {
 }
 
 .post-list__card img {
-    width: 391px;
+    width: 380px;    
     background-color: #eff6f1;
-    padding-top: 3px;
 }
 
 .post-list__card-content {
