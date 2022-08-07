@@ -140,14 +140,14 @@ body {
 .header-wrapper {
     max-width: 1200px;
     padding: 25px 15px;
-    margin: auto;     
+    margin: auto;    
 }
 
 .header__flex-box-top {
     position: relative;
     display: flex;    
     justify-content: space-between;
-    align-items: flex-start; 
+    align-items: center; 
 }
 
 .header__logo {       
@@ -169,7 +169,7 @@ body {
 /* Заголовок */
 .header-text {       
     margin: 100px auto;
-    width: 690px;   
+    max-width: 690px;   
     font-size: 45px;
     line-height: 75px; 
     text-align: center; 
@@ -295,7 +295,7 @@ main {
 .side-bar__card {
     display: flex;  
     justify-content: space-between;
-    width: 270px;
+    max-width: 270px;
     margin-top: 21px;
 }
 
@@ -307,7 +307,7 @@ main {
 }
 
 .side-bar__content {
-    width: 183px;
+    max-width: 183px;
 }
 
 .side-bar__card time {        
@@ -350,7 +350,7 @@ main {
 }
 
 .side-bar__search input {        
-    width: 222px;         
+    width: 222px;
 }
 
 .side-bar__search button {      
@@ -635,9 +635,10 @@ main {
 /* Tablet */
 .burger {
     display: none;
-    position: relative;
+    position: relative;  
+    margin-right: 35px;
     width: 23px;
-    height: 20px;
+    height: 20px;    
 }
 
 .burger::after,
@@ -648,6 +649,10 @@ main {
     height: 4px;
     left: 0;
     background-color: #ffffff;
+}
+
+.burger::before {
+    top: 0;
 }
 
 .burger::after {
@@ -674,19 +679,14 @@ main {
     }
 
     /* Сейчас в тренде */
-    .trends_wrapper {
-        flex-wrap: wrap;        
-    }
-    
-    .side-bar__header {
-        font-size: 18px;
+    .trends_card {
+        /* Уменьшил высоту карточки, т.к. на мой взгляд так лучше смотрится, чем когда она вытянута по вертикали */
+        min-height: 20vw;
     }
 
-    .trends_card {
-        flex-grow: 1;
-        max-width: 50%;
-        min-width: 45%;
-        min-height: 246px;
+    .trends_card-title {
+        /* Уменьшил внутренние отступы, т.к. на мой взгляд так лучше смотрится */
+        padding: 10px;        
     }
 
     .post-list__card-header {        
@@ -695,6 +695,7 @@ main {
 
     /* Основной контент */
     .main-wrapper {
+        justify-content: space-around;
         padding: 0 36px;
     }
 
@@ -708,15 +709,28 @@ main {
 
     .post-list__card-content {
         margin: 16px 0 0 0;
-    }
+    }    
 
     /* Наши изделия */
     .shop-wrap {
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        flex-wrap: wrap;        
         gap: 24px;
     }
+}
 
-    /* Подвал */
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
+    .trends_wrapper {
+        flex-wrap: wrap;        
+    }
 
+    .trends_card {
+        flex-grow: 1;
+        max-width: 50%;
+        min-width: 45%;
+        min-height: 246px;
+    }
+
+    .side-bar__header {
+        font-size: 18px;
+    } 
 }
