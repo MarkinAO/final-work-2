@@ -12,131 +12,77 @@
     font-weight: bold;
 }
 
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
- html {
+html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
-  }
- 
-  /**
-   * Remove the gray background on active links in IE 10.
-   */
-  
-  a {
+}
+
+a {
     background-color: transparent;
-  }
-  
-  /**
-   * Prevent `sub` and `sup` elements from affecting the line height in
-   * all browsers.
-   */
-  
-  sub,
-  sup {
+}
+
+sub,
+sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
-  }
-  
-  sub {
+}
+
+sub {
     bottom: -0.25em;
-  }
-  
-  sup {
+}
+
+sup {
     top: -0.5em;
-  }
-  
-  /* Embedded content
-     ========================================================================== */
-  
-  /**
-   * Remove the border on images inside links in IE 10.
-   */
-  
-  img {
+}
+
+img {
     border-style: none;
-  }
-  
-  /* Forms
-     ========================================================================== */
-  
-  /**
-   * 1. Change the font styles in all browsers.
-   * 2. Remove the margin in Firefox and Safari.
-   */
-  
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
     font-family: inherit; /* 1 */
     font-size: 100%; /* 1 */
     line-height: 1.15; /* 1 */
     margin: 0; /* 2 */
-  }
-  
-  /**
-   * Show the overflow in IE.
-   * 1. Show the overflow in Edge.
-   */
-  
-  button,
-  input { /* 1 */
+}
+
+button,
+input { /* 1 */
     overflow: visible;
-  }
-  
-  /**
-   * Remove the inheritance of text transform in Edge, Firefox, and IE.
-   * 1. Remove the inheritance of text transform in Firefox.
-   */
-  
-  button,
-  select { /* 1 */
+}
+
+button,
+select { /* 1 */
     text-transform: none;
-  }
-  
-  /**
-   * Correct the inability to style clickable types in iOS and Safari.
-   */
-  
-  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
+}
+
+button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
     -webkit-appearance: button;
-  }
-  
-  /**
-   * Remove the inner border and padding in Firefox.
-   */
-  
-  button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner {
+}
+
+button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
     border-style: none;
     padding: 0;
-  }
-  
-  /**
-   * Restore the focus styles unset by the previous rule.
-   */
-  
-  button:-moz-focusring,
-  [type="button"]:-moz-focusring,
-  [type="reset"]:-moz-focusring,
-  [type="submit"]:-moz-focusring {
+}
+
+button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText;
-  }
+}
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -186,15 +132,15 @@ body {
 .header {       
     min-height: 400px;
     color: #ffffff;    
-    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg") no-repeat top center;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/banner-bg.jpg") no-repeat top center;
     background-size: cover;
     background-color: #000000;
 }
 
 .header-wrapper {
-    width: 1200px;
+    max-width: 1200px;
     padding: 25px 15px;
-    margin: auto; 
+    margin: auto;     
 }
 
 .header__flex-box-top {
@@ -239,14 +185,14 @@ main {
 .main-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     padding: 0 10px;
 }
 
 /* Основной контент *****************************************/
 .post-list { 
-    width: 780px;
+    max-width: 780px;
     padding: 0 5px;    
 }
 
@@ -266,6 +212,8 @@ main {
 }
 
 .post-list__card-category {
+    display: flex;
+    gap: 14px;
     margin: 0;
     padding: 0;
 }
@@ -274,8 +222,7 @@ main {
     display: inline;    
 }
 
-.post-list__card-category-link {
-    margin-right: 14px;   
+.post-list__card-category-link {      
     font-size: 14px;    
     color: #b59f5b;
     font-weight: 700;
@@ -410,41 +357,48 @@ main {
     width: 49px;
     height: 49px;
     border: 0;    
-    background: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg") no-repeat center center, linear-gradient(#b59f5b, #b59f5b);
+    background: url("/svg/search.svg") no-repeat center center, linear-gradient(#b59f5b, #b59f5b);
     background-size: 18px;
 }
 
 .side-bar__search button:hover {
     cursor: pointer;
-    background: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg") no-repeat center center, linear-gradient(#323232, #323232);
+    background: url("/svg/search.svg") no-repeat center center, linear-gradient(#323232, #323232);
     background-size: 18px;
 }
 
 /* Подписка на рассылку */
 .side-bar__subscribe {   
     margin-top: 60px;     
-    width: 276px;
+    width: 100%;
     height: 164px;
     padding: 0 8px 0 0; 
 }
 
 .side-bar__subscribe input {
     margin-top: 21px;
-    width: 272px;  
+    width: 100%;  
 }
 
 .side-bar__subscribe button {
     margin-top: 19px;    
-    height: 49px;
-    width: 272px;  
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 49px;    
+    width: 100%;  
     font-size: 14px;    
     color: #ffffff;
-    font-weight: 700;
+    text-transform: uppercase;
+    font-weight: 700;    
     background-color: #b59f5b;
     border: 0;
 }
 
-.side-bar__subscribe button:hover {
+.btn:hover {
     cursor: pointer;
     background:#323232;
 }
@@ -507,15 +461,18 @@ main {
 }
 
 /* Подвал */
+.footer {
+    margin: 96px 0 30px;
+}
+
 .footer-wrapper {    
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 .footer__address {
-    margin: 0 0 70px;
-    padding: 30px 0;    
+    margin: 0 0 70px;    
     background-color: #f4f7f6; 
 }
 
@@ -539,15 +496,15 @@ main {
 }
 
 .footer__link_twitter {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg");    
+    background-image: url("/svg/001-dribbble.svg");    
 }
 
 .footer__link_pinterest {    
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg");    
+    background-image: url("/svg/001-pinterest.svg");    
 }
 
 .footer__link_tumblr {    
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");  
+    background-image: url("/svg/003-tumblr.svg");  
 }
 
 .footer__copyrights {
@@ -561,4 +518,205 @@ main {
 
 .footer__copyrights:hover {
     cursor: pointer;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!! Стили для второго диплома !!!!!!!!!!!!!!!!!!!! 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/* Сейчас в тренде */
+.trends_wrapper {
+    display: flex;    
+    gap: 4px;
+    margin: 28px 0 64px;
+}
+
+.trends_card {
+    display: flex;
+    align-items: flex-end;
+    width: 25%;
+    min-height: 320px;
+    padding: 16px 18px;
+    background-color: #000000;
+}
+
+.trends_card__img1 {
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/trend1.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+.trends_card__img2 {
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/trend2.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+.trends_card__img3 {
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/trend3.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+.trends_card__img4 {
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/trend4.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+.trends_card-title {    
+    padding: 37px 33px;
+    border: 3px solid #b59f5b;
+}
+
+.trends_card-link {
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Наши изделия */
+.shop-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 66px;
+    margin-top: 28px;
+}
+
+.shop_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;    
+}
+
+.shop_img {
+    max-width: 300px;
+}
+
+.shop_content {
+    flex-grow: 1;
+    margin-top: -32px;
+    padding: 55px 20px;
+    border: 3px solid #b59f5b;
+}
+
+.shop_text-link {
+    font-size: inherit;
+    font-weight: inherit;
+    text-transform: none;
+}
+
+.price-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 26px;
+}
+
+.price {
+    display: inline-flex;
+    width: 50%;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.price::after {
+    content: " \20BD";
+}
+
+.price__crossed {
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.price_btn {
+    width: 140px;
+}
+
+
+
+/* Tablet */
+.burger {
+    display: none;
+    position: relative;
+    width: 23px;
+    height: 20px;
+}
+
+.burger::after,
+.burger::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.burger::after {
+    bottom: 0;
+}
+
+.burger-line {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    top: 8px;
+    background-color: #ffffff;
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+    /* Шапка сайта */
+    .burger {
+        display: block;
+    }
+
+    .header__nav {
+        display: none;             
+    }
+
+    /* Сейчас в тренде */
+    .trends_wrapper {
+        flex-wrap: wrap;        
+    }
+    
+    .side-bar__header {
+        font-size: 18px;
+    }
+
+    .trends_card {
+        flex-grow: 1;
+        max-width: 50%;
+        min-width: 45%;
+        min-height: 246px;
+    }
+
+    .post-list__card-header {        
+        font-size: 17px;
+    }
+
+    /* Основной контент */
+    .main-wrapper {
+        padding: 0 36px;
+    }
+
+    .post-list {
+        max-width: 392px;
+    }
+
+    .post-list__card {
+        flex-wrap: wrap;
+    }
+
+    .post-list__card-content {
+        margin: 16px 0 0 0;
+    }
+
+    /* Наши изделия */
+    .shop-wrap {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 24px;
+    }
+
+    /* Подвал */
+
 }
