@@ -201,8 +201,7 @@ main {
     margin-bottom: 58px;
 }
 
-.post-list__card img {
-    width: 380px;    
+.post-list__card img { 
     background-color: #eff6f1;
 }
 
