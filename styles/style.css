@@ -138,21 +138,17 @@ body {
 }
 
 .header-wrapper {
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     max-width: 1200px;
     padding: 25px 15px;
     margin: auto;    
 }
 
-.header__flex-box-top {
-    position: relative;
-    display: flex;    
-    justify-content: space-between;
-    align-items: center; 
-}
-
 .header__logo {       
-    min-width: 179px;  
-    padding: 2px 3px;   
+    width: 180px;    
 }
 
 /* Навигация */
@@ -167,7 +163,7 @@ body {
 }
 
 /* Заголовок */
-.header-text {       
+.header-text {      
     margin: 100px auto;
     max-width: 690px;   
     font-size: 45px;
@@ -211,13 +207,10 @@ main {
 
 .post-list__card-category {
     display: flex;
+    flex-wrap: wrap;
     gap: 14px;
     margin: 0;
     padding: 0;
-}
-
-.post-list__card-category li {
-    display: inline;    
 }
 
 .post-list__card-category-link {      
@@ -369,8 +362,7 @@ main {
 .side-bar__subscribe {   
     margin-top: 60px;     
     width: 100%;
-    height: 164px;
-    padding: 0 8px 0 0; 
+    height: 164px;    
 }
 
 .side-bar__subscribe input {
@@ -630,11 +622,15 @@ main {
 
 
 
-/* Tablet */
-.burger {
+/*************** Tablet **************/
+.burger-wrap {
     display: none;
-    position: relative;  
-    margin-right: 35px;
+    justify-content: flex-end;
+    flex-basis: 30%;
+}
+
+.burger {    
+    position: relative;    
     width: 23px;
     height: 20px;    
 }
@@ -668,16 +664,20 @@ main {
 
 @media (min-width: 641px) and (max-width: 1200px) {
     /* Шапка сайта */
-    .burger {
-        display: block;
+    .header-wrapper {
+        padding: 50px 35px;
+    }
+
+    .burger-wrap {
+        display: flex;        
     }
 
     .header__nav {
         display: none;             
-    }
+    }   
 
     /* Сейчас в тренде */
-    .trends_card {
+    .trends_card {        
         /* Уменьшил высоту карточки, т.к. на мой взгляд так лучше смотрится, чем когда она вытянута по вертикали */
         min-height: 20vw;
     }
@@ -731,4 +731,115 @@ main {
     .side-bar__header {
         font-size: 18px;
     } 
+}
+
+
+
+/*************** Mobile **************/
+@media (max-width: 640px) {
+    /* Шапка сайта */
+    .header {        
+        min-height: 100vh;
+        background-position: 35%;        
+    }
+
+    .header-wrapper {        
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 30px 16px;       
+    }
+
+    .header__logo {        
+        width: 270px;
+    }
+
+    .burger-wrap {
+        display: flex;
+        align-self: flex-end;
+        order: -1;
+        margin-bottom: 175px;
+    }
+    
+    .header__nav {
+        display: none;             
+    }
+
+    .header-text {
+        margin-top: 45px;
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    /* Заголовки для всех блоков */
+    .side-bar__header {
+        font-size: 16px;
+    }
+
+    /* Сейчас в тренде */
+    .trends_wrapper {
+        flex-direction: column;
+    }
+
+    .trends_card {
+        width: 100%;
+        padding: 15px;        
+        min-height: 230px;
+    }
+
+    .trends_card-title {        
+        padding: 30px 20px;        
+    }
+
+    /* Основной контент */
+    .main-wrapper {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .post-list__card-header {        
+        font-size: 17px;
+    }
+
+    .post-list {
+        max-width: 100%;
+    }
+
+    .post-list__card {
+        flex-wrap: wrap;
+    }
+
+    .post-list__card img {
+        max-width: 100%;
+    }
+
+    .post-list__card-content {
+        margin: 16px 0 0 0;
+    }
+
+    /* Боковая панель */
+    .side-bar {
+        width: 100%;
+    }
+
+    .side-bar__search {
+        display: flex;        
+    }
+
+    .side-bar__search label {        
+        flex-grow: 1;
+    }
+
+    /* Наши изделия */
+    .shop {
+        margin-top: 45px;
+    }
+
+    .shop-wrap {
+        flex-wrap: wrap;
+    }
+
+    .shop_content {
+        padding: 55px 20px 25px;
+    }
 }
