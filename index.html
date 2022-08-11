@@ -50,7 +50,7 @@
 				Блог о творчестве, спорте,<br> и образе жизни
 			</h1>
 		</div>			
-	</header>
+	</header>	
 
 	<!-- Тело сайта -->
 	<main>
@@ -271,7 +271,7 @@
 				<!-- Форма поиска -->				
 				<form class="side-bar__search" action="#0" method="post">
 					<label>
-					<input type="text" placeholder="Найти...">
+					<input class="input" type="text" placeholder="Найти...">
 					<span class="visually-hidden">Поле для поиска</span>
 					</label>
 					<button type="submit">
@@ -285,7 +285,7 @@
 				<h2 class="side-bar__header">рассылка</h2>
 				<form action="#0">
 				  <label>
-					<input type="email" placeholder="Ваш email-адрес" required>
+					<input class="input" type="email" placeholder="Ваш email-адрес" required>
 					<span class="visually-hidden">Поле ввода email для подписки на обновления</span>
 				  </label>
 				  <button class="btn" type="submit">
@@ -446,5 +446,37 @@
 			</a>
 		</div>
 	</footer>
+
+	<!-- Всплывающая форма -->
+	<div class="popup-wrap visually-hidden">		
+		<div class="popup">
+			<div class="popup_cross"></div>
+
+			<h2 class="side-bar__header">Ваш фидбек</h2>
+			<form action="#0" method="post">
+				<p class="popup_text">
+					Как часто вы заходите на сайт?
+				</p>
+				<select class="popup_selform input" name="frequency">
+					<option value="every-day">Почти каждый день</option>
+					<option value="every-week">Пару раз в неделю</option>
+					<option value="every-month">Раз в месяц</option>
+					<option value="never">Я тут случайно</option>
+				</select>
+				<p class="popup_text">
+					Вы подписаны на e-mail рассылку?
+				</p>
+				<input class="display-none" type="radio" name="q-subscribe" id="yes" checked> 
+				<label class="popup_radio" for="yes">Да</label>
+				<input class="display-none" type="radio" name="q-subscribe" id="no">
+				<label class="popup_radio" for="no">Нет</label>
+				<p class="popup_text">
+					Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+				</p>
+				<textarea class="input popup_taria" name="user-needs" cols="30" rows="10" placeholder="Может, больше рецептов?"></textarea>
+				<button class="btn" type="submit">Отправить</button>
+			</form>
+		</div>
+	</div>
 </body>
 </html>
